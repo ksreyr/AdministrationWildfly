@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+</h:head>
+<body>
+    <h1>Lista de Helado</h1>
+    <h:dataTable value="#{indexBean.listAllHelados()}" var="helados" border="5">
+        <h:column>
+            <f:facet name="header">Id</f:facet>
+            <h:outputText value="#{helados.heladoID}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">NAME</f:facet>
+            <h:outputText value="#{helados.name}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">Prise</f:facet>
+            <h:outputText value="#{helados.price}"/>
+        </h:column>
+        <h:column>
+            <h:form>
+                <f:facet name="header">Editar</f:facet>
+            <h:commandButton action="#{indexBean.editHeladoXHTML(helados.heladoID)}" value="EDITAR"/>
+            </h:form>
+        </h:column>
+    </h:dataTable>
+    <h:form>
+    <h:commandButton action="#{indexBean.createHeladoXHTML}" value="creation"  />
+    </h:form>
+    <h1>Lista de Usuarios</h1>
+    <h:dataTable value="#{indexBean.listAllUsers()}" var="users" border="5">
+        <h:column>
+            <f:facet name="header">Id</f:facet>
+            <h:outputText value="#{users.userID}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">NAME</f:facet>
+            <h:outputText value="#{users.name}"/>
+        </h:column>
+        <h:column>
+            <h:form>
+                <f:facet name="header">Editar</f:facet>
+                <h:commandButton action="#{indexBean.editUserXHTML(users.userID)}" value="EDITAR"/>
+            </h:form>
+        </h:column>
+    </h:dataTable>
+    <h:form>
+        <h:commandButton action="#{indexBean.createUserXHTML}" value="creation"  />
+    </h:form>
+
+</body>
+</html>
