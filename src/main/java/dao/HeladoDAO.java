@@ -25,6 +25,11 @@ public class HeladoDAO extends objectDAO {
         //em.createQuery("SELECT h FROM Helado h where h.user = "+id).getResultList();
         return helados;
     }
+    public List<Helado> getAllHeladosLessByUser() {
+        List<Helado> helados = em.createQuery("SELECT h FROM Helado h where h.user is null ").getResultList();
+        //em.createQuery("SELECT h FROM Helado h where h.user = "+id).getResultList();
+        return helados;
+    }
 
     public Helado findByID(int id) {
         Helado helado = em.find(Helado.class, id);

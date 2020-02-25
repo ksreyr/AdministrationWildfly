@@ -1,6 +1,7 @@
 package bean;
 
 import lombok.Data;
+import model.Helado;
 import model.User;
 import services.UserService;
 
@@ -10,6 +11,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.transaction.Transactional;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Named("createdUserBean")
@@ -34,7 +36,7 @@ public class CreateUserBean implements Serializable {
         return userList;
     }
     public void createUser(){
-        User user=new User(name);
+        User user=new User(name,new ArrayList<Helado>());
         userService.saveUser(user);
         getAllUsers();
     }

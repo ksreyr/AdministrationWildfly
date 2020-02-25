@@ -31,4 +31,16 @@ public class HeladoService implements Serializable {
         helados = heladoDAO.getAllHelados();
         return helados;
     }
+    public List<Helado> getHeladosLessUsers() {
+        helados = heladoDAO.getAllHeladosLessByUser();
+        return helados;
+    }
+    public Helado getHeladoByID(int heladoID){
+        Helado helado=heladoDAO.findByID(heladoID);
+        return helado;
+    }
+
+    public void editHelado(Helado helado){
+        heladoDAO.update(helado);
+    }
 }

@@ -3,6 +3,7 @@ package model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 
 @Data
 @Entity
@@ -37,7 +38,12 @@ public class Helado {
         this.price=price;
         this.number=number;
     }
-
+    public Helado(String name, int price, int number,User user) {
+        this.name=name;
+        this.price=price;
+        this.number=number;
+        this.user=user;
+    }
     //CONSTRUCTOR
     @Override
     public String toString() {

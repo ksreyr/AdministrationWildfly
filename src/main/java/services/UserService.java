@@ -31,6 +31,8 @@ public class UserService implements Serializable {
         userDAO.delete(user);
     }
 
+    public void update(User user){ userDAO.update(user);}
+
     public List<User> getAllUsers(){
         users=userDAO.getAllUsers();
         return users;
@@ -40,4 +42,5 @@ public class UserService implements Serializable {
         User user =userDAO.getUserByID(id);
         return user;
     }
+
 }

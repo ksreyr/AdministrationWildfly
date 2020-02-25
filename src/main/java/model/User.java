@@ -3,6 +3,7 @@ package model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,14 +16,15 @@ public class User {
 
     String name;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     public List<Helado> helados;
 
     public User() {
     }
 
-    public User(String name){
+    public User(String name,List<Helado> helados){
         this.name = name;
+        this.helados = helados;
     }
 
     @Override
