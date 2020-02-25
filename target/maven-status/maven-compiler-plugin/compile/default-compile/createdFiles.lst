@@ -1,4 +1,10 @@
-controllers/objectDAO.class
-controllers/HeladosDAO.class
+bean/CreateUserBean.class
 model/Helado.class
-services/IndexBean.class
+dao/UserDAO.class
+dao/objectDAO.class
+model/User.class
+services/HeladoService.class
+dao/HeladoDAO.class
+bean/IndexBean.class
+services/UserService.class
+bean/CreateHeladoBean.class

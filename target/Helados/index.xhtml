@@ -1,57 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-<h:head>
-</h:head>
-<body>
-    <h1>Lista de Helado</h1>
-    <h:dataTable value="#{indexBean.listAllHelados()}" var="helados" border="5">
-        <h:column>
-            <f:facet name="header">Id</f:facet>
-            <h:outputText value="#{helados.heladoID}"/>
-        </h:column>
-        <h:column>
-            <f:facet name="header">NAME</f:facet>
-            <h:outputText value="#{helados.name}"/>
-        </h:column>
-        <h:column>
-            <f:facet name="header">Prise</f:facet>
-            <h:outputText value="#{helados.price}"/>
-        </h:column>
-        <h:column>
-            <h:form>
-                <f:facet name="header">Editar</f:facet>
-            <h:commandButton action="#{indexBean.editHeladoXHTML(helados.heladoID)}" value="EDITAR"/>
-            </h:form>
-        </h:column>
-    </h:dataTable>
-    <h:form>
-    <h:commandButton action="#{indexBean.createHeladoXHTML}" value="creation"  />
-    </h:form>
-    <h1>Lista de Usuarios</h1>
-    <h:dataTable value="#{indexBean.listAllUsers()}" var="users" border="5">
-        <h:column>
-            <f:facet name="header">Id</f:facet>
-            <h:outputText value="#{users.userID}"/>
-        </h:column>
-        <h:column>
-            <f:facet name="header">NAME</f:facet>
-            <h:outputText value="#{users.name}"/>
-        </h:column>
-        <h:column>
-            <h:form>
-                <f:facet name="header">Editar</f:facet>
-                <h:commandButton action="#{indexBean.editUserXHTML(users.userID)}" value="EDITAR"/>
-            </h:form>
-        </h:column>
-    </h:dataTable>
-    <h:form>
-        <h:commandButton action="#{indexBean.createUserXHTML}" value="creation"  />
-    </h:form>
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
 
-</body>
+<h:head>
+    <title>Helados Web</title>
+</h:head>
+
+<h:body>
+
+    <p:sidebar widgetVar="sidebar1" baseZIndex="10000">
+            <h:form>
+                <p:growl>
+                    <p:autoUpdate/>
+                </p:growl>
+                <p:panelMenu>
+                    <p:submenu label="Creacion">
+                        <p:menuitem value="Crear Empleado" action="#{indexBean.linkCrearUsuario}" ajax="false"
+                                    icon="pi pi-user"/>
+                        <p:menuitem value="Crear Helado" action="#{indexBean.linkCrearHelado}" ajax="false"
+                                    icon="pi pi-plus"/>
+                    </p:submenu>
+                    <p:separator/>
+                    <p:submenu label="Surtir">
+                        <p:menuitem value="Surtir Empleado" action="#{indexBean.linkSurtirEmpleado}" ajax="false"
+                                    icon="pi pi-user"/>
+                        <p:menuitem value="Surtir Puntos" action="#{indexBean.linkCrearHelado}" ajax="false"
+                                    icon="pi pi-plus"/>
+                    </p:submenu>
+                    <p:separator/>
+                    <p:submenu label="Inventario">
+                        <p:menuitem value="Information de Puntos" action="#{indexBean.linkCrearUsuario}" ajax="false"
+                                    icon="pi pi-user"/>
+                        <p:menuitem value="Information de Empleado" action="#{indexBean.linkCrearHelado}" ajax="false"
+                                    icon="pi pi-plus"/>
+                    </p:submenu>
+
+                </p:panelMenu>
+            </h:form>
+        <p:commandButton value="Cancel" oncomplete="PF('sidebar1').hide()"/>
+    </p:sidebar>
+    <p:commandButton icon="pi pi-arrow-right" oncomplete="PF('sidebar1').show()"/>
+
+</h:body>
 </html>

@@ -1,9 +1,14 @@
 package model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
-@Table(name = "Helado")
+@NamedQueries({
+        @NamedQuery(name = "Helado.findHeladoByUserId", query = "SELECT h FROM Helado h WHERE h.user.userID = :id")
+})
 public class Helado {
     @Id
     @GeneratedValue
@@ -13,48 +18,34 @@ public class Helado {
 
     int price;
 
+    int number;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userID")
     User user;
 
-    public Helado(int heladoID, String name, int price) {
+    //CONSTRUCTOR
+    public Helado(String name, int price) {
         this.name = name;
         this.price = price;
-        this.heladoID = heladoID;
     }
-
     public Helado() {
     }
 
-    public int getHeladoID() {
-        return heladoID;
+    public Helado(String name, int price, int number) {
+        this.name=name;
+        this.price=price;
+        this.number=number;
     }
 
-    public void setHeladoID(int id) {
-        this.heladoID = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
+    //CONSTRUCTOR
+    @Override
+    public String toString() {
+        return "Helado{" +
+                "heladoID=" + heladoID +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", user=" + user +
+                '}';
     }
 }

@@ -13,12 +13,16 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
+    <context-param>
+        <param-name>primefaces.THEME</param-name>
+        <param-value>nova-light</param-value>
+    </context-param>
+
     <!-- xhtml pages are handled by Faces Servlet -->
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
-
     <!-- Welcome files -->
     <welcome-file-list>
         <welcome-file>index.xhtml</welcome-file>

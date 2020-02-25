@@ -1,32 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:p="http://primefaces.org/ui">
+
 <h:head>
 
 </h:head>
+
 <h:body>
-    <h1>Nuevo Helado</h1>
+
+    <p:sidebar widgetVar="sidebar1" baseZIndex="10000">
+        <h:form>
+            <p:growl>
+                <p:autoUpdate/>
+            </p:growl>
+            <p:panelMenu>
+                <p:submenu label="Optiones">
+                    <p:menuitem value="Home" action="#{createHeladoBean.linkHome}" ajax="false"
+                                icon="pi pi-home"/>
+                </p:submenu>
+            </p:panelMenu>
+        </h:form>
+        <p:commandButton value="Cancel" oncomplete="PF('sidebar1').hide()"/>
+    </p:sidebar>
+    <p:commandButton icon="pi pi-arrow-right" oncomplete="PF('sidebar1').show()"/>
+
+
     <h:form>
-        name: <h:inputText value="#{createHeladoBean.heladoName}" required="true"/>
-        price: <h:inputText value="#{createHeladoBean.heladoPrice}" required="true"/>
-        <h:commandButton value="Guardar" action="#{createHeladoBean.createHelado}"> </h:commandButton>
+        <p:panel header="Formulario para crear Helados">
+            <h:panelGrid id="grid" columns="2" cellpadding="5">
+                <p:outputLabel for="" value="Nombre:"/>
+                <p:inputText id="Name" value="#{createHeladoBean.name}" required="true" label="Nombre"/>
+                <p:outputLabel for="" value="Precio:"/>
+                <p:inputText id="Price" value="#{createHeladoBean.price}" required="true" label="Precio"/>
+                <p:outputLabel for="" value="Cantidad:"/>
+                <p:inputText id="Number" value="#{createHeladoBean.number}" required="true" label="Precio"/>
+            </h:panelGrid>
+            <p:commandButton ajax="false"
+                             value="Crear"
+                             icon="pi pi-check"
+                             action="#{createHeladoBean.createHelado}"
+                             style="margin-right:40px"/>
+        </p:panel>
     </h:form>
-    <h:form>
-        <h:commandButton action="#{indexBean.indexXHTML}" value="HOME"/>
-    </h:form>
-    <h1>Lista de Posibles Usuarios</h1>
-    <h:dataTable value="#{indexBean.listAllUsers()}" var="users" border="5">
-        <h:column>
-            <f:facet name="header">Id</f:facet>
-            <h:outputText value="#{users.userID}"/>
-        </h:column>
-        <h:column>
-            <f:facet name="header">NAME</f:facet>
-            <h:outputText value="#{users.name}"/>
-        </h:column>
-    </h:dataTable>
+
+    <p:panel header="Lista de Helados">
+        <p:dataTable var="helado" value="#{createHeladoBean.allHelados()}">
+
+            <p:column headerText="Id">
+                <h:outputText value="#{helado.heladoID}"/>
+            </p:column>
+
+            <p:column headerText="Nombre">
+                <h:outputText value="#{helado.name}"/>
+            </p:column>
+
+            <p:column headerText="Precio">
+                <h:outputText value="#{helado.price}"/>
+            </p:column>
+
+            <p:column headerText="Cantidad">
+                <h:outputText value="#{helado.number}"/>
+            </p:column>
+
+        </p:dataTable>
+    </p:panel>
+
+
 </h:body>
 </html>
