@@ -1,0 +1,6 @@
+projectKey=org.example:WildflyProjekt
+serverUrl=http://localhost:9000
+serverVersion=8.1.0.31237
+dashboardUrl=http://localhost:9000/dashboard?id=org.example%3AWildflyProjekt
+ceTaskId=AXCCE2EHzuLXRzi_1R8Z
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXCCE2EHzuLXRzi_1R8Z

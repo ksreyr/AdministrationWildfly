@@ -6,5 +6,6 @@ model/User.class
 services/HeladoService.class
 dao/HeladoDAO.class
 bean/IndexBean.class
+bean/SurtirEmpleadoBean.class
 services/UserService.class
 bean/CreateHeladoBean.class
