@@ -23,6 +23,16 @@ public class IndexBean implements Serializable {
         return "surtirEmpleado?faces-redirect=true";
     }
 
+    public String linkinfoPuntos() {
+        return "puntoInfo?faces-redirect=true";
+    }
 
+    public String linkinfoEmpleados() {
+        return "empleadosInfo?faces-redirect=true";
+    }
+
+    public String linkinfoBodegas() {
+        return "bodegaInfo?faces-redirect=true";
+    }
 }
 

@@ -16,15 +16,16 @@ public class User {
 
     String name;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     public List<Helado> helados;
 
     public User() {
     }
 
+
     public User(String name,List<Helado> helados){
         this.name = name;
-        this.helados = helados;
+        this.helados=helados;
     }
 
     @Override

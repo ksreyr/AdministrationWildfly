@@ -18,8 +18,10 @@
             </p:growl>
             <p:panelMenu>
                 <p:submenu label="Optiones">
-                    <p:menuitem value="Home" action="#{createHeladoBean.linkHome}" ajax="false"
+                    <p:menuitem value="Home" action="#{surtirEmpleadoBean.linkHome}" ajax="false"
                                 icon="pi pi-home"/>
+                    <p:menuitem value="Back" action="#{surtirEmpleadoBean.linkBack}" ajax="false"
+                                icon="pi pi-arrow-left"/>
                 </p:submenu>
             </p:panelMenu>
         </h:form>

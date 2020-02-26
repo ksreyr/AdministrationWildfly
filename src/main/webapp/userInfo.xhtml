@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Helados Web</title>
+</h:head>
+
+<h:body>
+
+    <p:sidebar widgetVar="sidebar1" baseZIndex="10000">
+        <h:form>
+            <p:growl>
+                <p:autoUpdate/>
+            </p:growl>
+            <p:panelMenu>
+                <p:submenu label="Optiones">
+                    <p:menuitem value="Home" action="#{createdUserBean.linkHome}" ajax="false"
+                                icon="pi pi-home"/>
+                    <p:menuitem value="Back" action="#{empleadosInfoBean.linkBack}" ajax="false"
+                                     icon="pi pi-arrow-left"/>
+                </p:submenu>
+            </p:panelMenu>
+        </h:form>
+        <p:commandButton value="Cancel" oncomplete="PF('sidebar1').hide()"/>
+    </p:sidebar>
+    <p:commandButton icon="pi pi-arrow-right" oncomplete="PF('sidebar1').show()"/>
+
+
+    <p:panel header="Lista de Usuarios disponibles">
+        <p:dataTable var="helado" value="#{empleadosInfoBean.getUserHelados()}">
+            <p:column headerText="Name">
+                <h:outputText value="#{helado.name}"/>
+            </p:column>
+            <p:column headerText="Name">
+                <h:outputText value="#{helado.number}"/>
+            </p:column>
+        </p:dataTable>
+    </p:panel>
+
+</h:body>
+</html>
