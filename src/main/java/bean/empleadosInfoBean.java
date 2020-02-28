@@ -5,6 +5,7 @@ import model.Helado;
 import model.User;
 import services.UserService;
 
+
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
@@ -19,17 +20,18 @@ import java.util.List;
 @RequestScoped
 @Data
 public class empleadosInfoBean implements Serializable {
+
     @Inject
     private UserService userService;
 
     private List<User> getAllUsers;
 
-    User user;
+    private User user;
 
     private List<Helado> heladosOFaUser;
 
     public String linkHome() {
-        FacesContext.getCurrentInstance().getExternalContext().getSessionMap().clear();
+
         return "index?faces-redirect=true";
     }
 
