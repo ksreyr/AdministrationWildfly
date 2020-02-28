@@ -5,6 +5,7 @@ import model.Helado;
 import model.User;
 import services.UserService;
 
+import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
@@ -15,7 +16,7 @@ import java.util.List;
 
 @Named("empleadosInfoBean")
 @Transactional
-@ViewScoped
+@RequestScoped
 @Data
 public class empleadosInfoBean implements Serializable {
     @Inject
@@ -28,6 +29,7 @@ public class empleadosInfoBean implements Serializable {
     private List<Helado> heladosOFaUser;
 
     public String linkHome() {
+        FacesContext.getCurrentInstance().getExternalContext().getSessionMap().clear();
         return "index?faces-redirect=true";
     }
 
@@ -43,6 +45,10 @@ public class empleadosInfoBean implements Serializable {
     public String userInfo(String userID){
         FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("userID",userID);
         return "userInfo?faces-redirect=true";
+    }
+    public String userInfoDinero(String userID){
+        FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("userID",userID);
+        return "userInfoDinero?faces-redirect=true";
     }
 
     public List<Helado> getUserHelados(){

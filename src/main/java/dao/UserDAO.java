@@ -13,6 +13,7 @@ public class UserDAO extends objectDAO {
     public void update(User user) {
 
         em.merge(user);
+
     }
 
     public void delete(User user){

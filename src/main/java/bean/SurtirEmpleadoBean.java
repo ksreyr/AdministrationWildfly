@@ -7,6 +7,7 @@ import model.User;
 import services.HeladoService;
 import services.UserService;
 
+import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
@@ -17,7 +18,7 @@ import java.util.List;
 
 @Named("surtirEmpleadoBean")
 @Transactional
-@ViewScoped
+@RequestScoped
 @Data
 public class SurtirEmpleadoBean implements Serializable {
     User user;
@@ -27,7 +28,7 @@ public class SurtirEmpleadoBean implements Serializable {
     @Inject
     UserService userService;
 
-    int cantidad;
+    String cantidad;
 
     List<Helado> heladoList;
 
@@ -40,9 +41,9 @@ public class SurtirEmpleadoBean implements Serializable {
     }
 
     public String linkSurtir(String id) {
-        //user = userService.findUser(Integer.parseInt(id));
+
         FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("ID", id);
-        //FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("User",user);
+
         return "surtir?faces-redirect=true";
     }
 
@@ -50,35 +51,52 @@ public class SurtirEmpleadoBean implements Serializable {
         heladoList = heladoService.getHeladosLessUsers();
         return heladoList;
     }
-
+    public void resetVariables(){
+        heladoList = heladoService.getHeladosLessUsers();
+        cantidad=null;
+    }
     public String sutir(String heladoID) {
         try {
             String id = (String) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("ID");
+            //USER TO UPDATE
             User hUser= userService.findUser(Integer.parseInt(id));
+            //HELADO TO UPDATE
             Helado heladoEnBodega = heladoService.getHeladoByID(Integer.parseInt(heladoID));
+            //CANTIDAD
             int number = heladoEnBodega.getNumber();
-            if (cantidad < number) {
-                number = number - cantidad;
+
+            if (Integer.parseInt(cantidad )< number) {
+                //Numero en Bodega
+                number = number - Integer.parseInt(cantidad);
+                //Descuento el valor del Helado ne bodega
                 heladoEnBodega.setNumber(number);
+                //Guardo el Helado en Bodega con el nuevo valor
                 heladoService.editHelado(heladoEnBodega);
-                Helado userHelado = new Helado(heladoEnBodega.getName(), heladoEnBodega.getPrice(), cantidad, user);
-                userHelado.setNumber(cantidad);
 
                 //Helados de Usuario
-                List<Helado> userHeladoList = hUser.helados;
-                userHeladoList.add(userHelado);
-                hUser.setHelados(userHeladoList);
-                user=hUser;
-                userService.update(hUser);
+                List<Helado> userHeladoList = hUser.getHelados();
+                //Veo si Usuario tiene el Helado
+                Boolean hat_Helado = userService.hatHelado(userHeladoList,heladoEnBodega);
 
-                //Actualizar
-                heladoList = heladoService.getAllHelados();
-                return "surtir?faces-redirect=true";
+                Helado userHelado = new Helado(heladoEnBodega.getName(),
+                        heladoEnBodega.getPrice(),
+                        Integer.parseInt(cantidad),hUser.getName());
+
+                if(hat_Helado){
+                    heladoService.updateHelado(userHeladoList,userHelado);
+                }else {
+                    userHeladoList.add(userHelado);
+                    hUser.setHelados(userHeladoList);
+                    userService.update(hUser);
+                }
+                resetVariables();
+                return "Success";
             } else {
                 return "No enougt Helados";
             }
         } catch (Exception e) {
-            System.out.printf("I do not have User");
+            System.out.println("Something happen");
+            e.printStackTrace();
             return "Not User";
         }
         //Helados de la Fabrica

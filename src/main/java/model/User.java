@@ -16,8 +16,8 @@ public class User {
 
     String name;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    public List<Helado> helados;
+    @OneToMany(fetch = FetchType.EAGER,cascade=CascadeType.ALL)
+    private List<Helado> helados;
 
     public User() {
     }

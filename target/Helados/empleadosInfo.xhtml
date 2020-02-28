@@ -24,18 +24,28 @@
     </p:sidebar>
 
     <p:commandButton icon="pi pi-arrow-right" oncomplete="PF('sidebar1').show()"/>
-    <p:panel header="Lista de Usuarios disponibles">
+    <p:panel header="Usuarios">
         <p:dataTable var="user" value="#{empleadosInfoBean.allUserList}">
             <p:column headerText="Name">
                 <h:outputText value="#{user.name}"/>
             </p:column>
-            <p:column headerText="Numero a dar">
+            <p:column headerText="Ver productos del Usuario">
                 <h:form>
 
                     <p:commandButton ajax="false"
                                      value="Ver"
                                      icon="pi pi-arrow-right"
                                      action="#{empleadosInfoBean.userInfo(user.userID)}"
+                                     style="margin-right:40px"/>
+                </h:form>
+            </p:column>
+            <p:column headerText="Cantidad de dinero">
+                <h:form>
+
+                    <p:commandButton ajax="false"
+                                     value="Dinero"
+                                     icon="pi pi-arrow-right"
+                                     action="#{empleadosInfoBean.userInfoDinero(user.userID)}"
                                      style="margin-right:40px"/>
                 </h:form>
             </p:column>

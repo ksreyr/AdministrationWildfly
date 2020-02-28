@@ -21,12 +21,30 @@ public class initialData {
     @PostConstruct
     void init(){
         User user = new User("paula",new ArrayList<Helado>());
-        Helado helado = new Helado("casero",1500,1000);
+        User user1 = new User("daniel",new ArrayList<Helado>());
+        User user2 = new User("jeffrey",new ArrayList<Helado>());
+
+        Helado helado = new Helado("casero",1500,1000,"Bodega");
+        Helado helado1 = new Helado("chococono",2000,2000,"Bodega");
+        Helado helado2 = new Helado("Polet",5000,3000,"Bodega");
+
         System.out.println("::::Persist User::::");
         em.persist(user);
-        System.out.println("::::Persist User DONE::::");
+        System.out.println("::::Persist User DONE::::"+user.getName());
+        System.out.println("::::Persist User::::");
+        em.persist(user1);
+        System.out.println("::::Persist User DONE::::"+user1.getName());
+        System.out.println("::::Persist User::::");
+        em.persist(user2);
+        System.out.println("::::Persist User DONE::::"+user2.getName());
         System.out.println("::::Persist Helado::::");
         em.persist(helado);
-        System.out.println("::::Persist helado DONE::::");
+        System.out.println("::::Persist helado DONE::::"+helado.getName());
+        System.out.println("::::Persist Helado::::");
+        em.persist(helado1);
+        System.out.println("::::Persist helado DONE::::"+helado1.getName());
+        System.out.println("::::Persist Helado::::");
+        em.persist(helado2);
+        System.out.println("::::Persist helado DONE::::"+helado2.getName());
     }
 }

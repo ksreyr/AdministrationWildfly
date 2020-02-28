@@ -8,7 +8,7 @@ import java.util.ArrayList;
 @Data
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "Helado.findHeladoByUserId", query = "SELECT h FROM Helado h WHERE h.user.userID = :id")
+        @NamedQuery(name = "Helado.findHeladoByUserName", query = "SELECT h FROM Helado h WHERE h.owner = :name")
 })
 public class Helado {
     @Id
@@ -21,10 +21,7 @@ public class Helado {
 
     int number;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userID")
-    User user;
-
+    String owner;
     //CONSTRUCTOR
     public Helado(String name, int price) {
         this.name = name;
@@ -33,16 +30,12 @@ public class Helado {
     public Helado() {
     }
 
-    public Helado(String name, int price, int number) {
+    public Helado(String name, int price, int number,String owner) {
         this.name=name;
         this.price=price;
         this.number=number;
-    }
-    public Helado(String name, int price, int number,User user) {
-        this.name=name;
-        this.price=price;
-        this.number=number;
-        this.user=user;
+        this.owner=owner;
+
     }
     //CONSTRUCTOR
     @Override
@@ -50,8 +43,8 @@ public class Helado {
         return "Helado{" +
                 "heladoID=" + heladoID +
                 ", name='" + name + '\'' +
-                ", price=" + price +
-                ", user=" + user +
+                ", number=" + number +
+                ", owner=" + owner +
                 '}';
     }
 }

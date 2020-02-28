@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Helados Web</title>
+</h:head>
+
+<h:body>
+
+    <p:sidebar widgetVar="sidebar1" baseZIndex="10000">
+            <h:form>
+                <p:growl>
+                    <p:autoUpdate/>
+                </p:growl>
+                <p:panelMenu>
+                    <p:submenu label="Creacion">
+                        <p:menuitem value="Crear Empleado" action="#{indexBean.linkCrearUsuario}" ajax="false"
+                                    icon="pi pi-user-plus"/>
+                        <p:menuitem value="Crear Helado" action="#{indexBean.linkCrearHelado}" ajax="false"
+                                    icon="pi pi-plus"/>
+                    </p:submenu>
+                    <p:separator/>
+                    <p:submenu label="Surtir">
+                        <p:menuitem value="Surtir Empleado" action="#{indexBean.linkSurtirEmpleado}" ajax="false"
+                                    icon="pi pi-users"/>
+                        <p:menuitem value="Surtir Puntos" action="#{indexBean.linkCrearHelado}" ajax="false"
+                                    icon="pi pi-plus"/>
+                    </p:submenu>
+                    <p:separator/>
+                    <p:submenu label="Inventario">
+                        <p:menuitem value="Information de Puntos" action="#{indexBean.linkinfoPuntos}" ajax="false"
+                                    icon="pi pi-info"/>
+                        <p:menuitem value="Information de Empleados" action="#{indexBean.linkinfoEmpleados}" ajax="false"
+                                    icon="pi pi-users"/>
+                        <p:menuitem value="Information de Bodega" action="#{indexBean.linkinfoBodegas}" ajax="false"
+                                    icon="pi pi-plus"/>
+                    </p:submenu>
+
+                </p:panelMenu>
+            </h:form>
+        <p:commandButton value="Cancel" oncomplete="PF('sidebar1').hide()"/>
+    </p:sidebar>
+    <p:commandButton icon="pi pi-arrow-right" oncomplete="PF('sidebar1').show()"/>
+
+</h:body>
+</html>

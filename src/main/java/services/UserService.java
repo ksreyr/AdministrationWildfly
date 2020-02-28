@@ -3,6 +3,7 @@ package services;
 import dao.HeladoDAO;
 import dao.UserDAO;
 import lombok.Data;
+import model.Helado;
 import model.User;
 
 import javax.inject.Inject;
@@ -31,7 +32,9 @@ public class UserService implements Serializable {
         userDAO.delete(user);
     }
 
-    public void update(User user){ userDAO.update(user);}
+    public void update(User user){
+        userDAO.update(user);
+    }
 
     public List<User> getAllUsers(){
         users=userDAO.getAllUsers();
@@ -42,5 +45,16 @@ public class UserService implements Serializable {
         User user =userDAO.getUserByID(id);
         return user;
     }
+
+    public boolean hatHelado(List<Helado> helados, Helado helado){
+        for (Helado h :
+                helados) {
+            if(h.getName().equals(helado.getName())){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }

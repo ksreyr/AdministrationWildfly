@@ -34,7 +34,7 @@ public class CreateHeladoBean implements Serializable {
     }
 
     public void createHelado(){
-        Helado h = new Helado(name,Integer.parseInt(price),Integer.parseInt(number));
+        Helado h = new Helado(name,Integer.parseInt(price),Integer.parseInt(number),"Bodega");
         heladoService.createHelado(h);
         allHelados();
     }

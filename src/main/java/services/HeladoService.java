@@ -3,7 +3,6 @@ package services;
 import dao.HeladoDAO;
 import lombok.Data;
 import model.Helado;
-import model.User;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
@@ -31,16 +30,35 @@ public class HeladoService implements Serializable {
         helados = heladoDAO.getAllHelados();
         return helados;
     }
+
     public List<Helado> getHeladosLessUsers() {
         helados = heladoDAO.getAllHeladosLessByUser();
         return helados;
     }
-    public Helado getHeladoByID(int heladoID){
-        Helado helado=heladoDAO.findByID(heladoID);
+
+    public Helado getHeladoByID(int heladoID) {
+        Helado helado = heladoDAO.findByID(heladoID);
         return helado;
     }
 
-    public void editHelado(Helado helado){
+    public void editHelado(Helado helado) {
         heladoDAO.update(helado);
+
+    }
+
+    public Helado getHeladoByName(String name, String owner) {
+        Helado helado = heladoDAO.findByNameAndOwner(name, owner);
+        return helado;
+    }
+
+    public void updateHelado(List<Helado> helados, Helado helado) {
+        for (Helado h :
+                helados) {
+            if (h.getName().equals(helado.getName())) {
+                h.setNumber(helado.getNumber()+h.getNumber());
+                heladoDAO.update(h);
+            }
+        }
     }
 }
+
