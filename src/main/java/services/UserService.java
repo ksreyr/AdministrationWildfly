@@ -55,6 +55,15 @@ public class UserService implements Serializable {
         }
         return false;
     }
-
+    public User findUserByName(String name){
+        User u = userDAO.getUsetByName(name);
+        return u;
+    }
+    public boolean userValidation(User u, String s){
+        if(u.getPassword()==s){
+            return true;
+        }
+        return false;
+    }
 
 }

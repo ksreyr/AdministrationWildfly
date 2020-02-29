@@ -35,7 +35,7 @@ public class UserDAO extends objectDAO {
         return user;
     }
      public User getUsetByName(String name){
-        User user = (User) em.createQuery("SELECT u FROM User u WHERE u.name='"+name+"'");
+        User user = (User) em.createQuery("SELECT u FROM User u WHERE u.name='"+name+"'").getSingleResult();
         return user;
      }
 

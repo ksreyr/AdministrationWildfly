@@ -64,7 +64,7 @@ public class HeladoService implements Serializable {
        int priceTotal=0;
         for (Helado h:
              helados) {
-            priceTotal=priceTotal+h.getPrice();
+            priceTotal=priceTotal+(h.getPrice()*h.getNumber());
         }
         return Integer.toString(priceTotal);
     }

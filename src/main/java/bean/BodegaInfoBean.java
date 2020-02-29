@@ -4,6 +4,7 @@ package bean;
 import lombok.Data;
 import model.Helado;
 import services.HeladoService;
+import services.UserService;
 
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
@@ -24,6 +25,12 @@ public class BodegaInfoBean implements Serializable {
 
     List<Helado> helados;
 
+    @Inject
+    UserService userService;
+
+    String total;
+
+
     public String linkHome() {
         return "index?faces-redirect=true";
     }
@@ -31,6 +38,11 @@ public class BodegaInfoBean implements Serializable {
     public List<Helado> getAllHeladosBodega(){
         helados=heladoService.getHeladosLessUsers();
         return helados;
+    }
+    public String totalGelb(){
+        List<Helado> helados= heladoService.getHeladosLessUsers();
+        total=heladoService.precioTotal(helados);
+        return total;
     }
 
 }
