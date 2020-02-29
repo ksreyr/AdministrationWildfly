@@ -36,7 +36,7 @@ public class CreateUserBean implements Serializable {
         return userList;
     }
     public void createUser(){
-        User user=new User(name,new ArrayList<Helado>());
+        User user=new User(name,"Prueba",new ArrayList<Helado>());
         userService.saveUser(user);
         getAllUsers();
     }

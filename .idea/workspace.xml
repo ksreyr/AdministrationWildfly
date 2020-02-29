@@ -16,11 +16,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f6f4172-dbcf-445d-9537-956aa4b3b51b" name="Default Changelist" comment="creation Users">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/HeladoWeb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WildflyProjekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WildflyProjekt.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bean/CreateUserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/CreateUserBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bean/UserInfoDineroBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/UserInfoDineroBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bean/empleadosInfoBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/empleadosInfoBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Helados/WEB-INF/classes/bean/empleadosInfoBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Helados/WEB-INF/classes/bean/empleadosInfoBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bean/empleadosInfoBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean/empleadosInfoBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/HeladoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/HeladoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/initialData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/initialData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bodegaInfo.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bodegaInfo.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/createHelado.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/createHelado.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/createUser.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/createUser.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/empleadosInfo.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/empleadosInfo.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/surtir.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/surtir.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/surtirEmpleado.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/surtirEmpleado.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/userInfo.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/userInfo.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/userInfoDinero.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/userInfoDinero.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Helados/WEB-INF/classes/bean/CreateUserBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Helados/WEB-INF/classes/bean/CreateUserBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Helados/WEB-INF/classes/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Helados/WEB-INF/classes/dao/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Helados/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Helados/WEB-INF/classes/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Helados/WEB-INF/classes/services/initialData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Helados/WEB-INF/classes/services/initialData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Helados/createHelado.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Helados/createHelado.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Helados/createUser.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Helados/createUser.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Helados/empleadosInfo.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Helados/empleadosInfo.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Helados/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Helados/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Helados/surtir.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Helados/surtir.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Helados/surtirEmpleado.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Helados/surtirEmpleado.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Helados/userInfo.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Helados/userInfo.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bean/CreateUserBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean/CreateUserBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/initialData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/initialData.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +73,15 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1XBPHgH98tLD5OXl0yrKo7Rzi35" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -185,7 +216,10 @@
       <workItem from="1582820058303" duration="350000" />
       <workItem from="1582820435728" duration="315000" />
       <workItem from="1582838423193" duration="11570000" />
-      <workItem from="1582850446588" duration="1558000" />
+      <workItem from="1582850446588" duration="3010000" />
+      <workItem from="1582887619470" duration="51000" />
+      <workItem from="1582890164959" duration="1385000" />
+      <workItem from="1583005192596" duration="2490000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1582596512026</created>
@@ -227,6 +261,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update" />
     <MESSAGE value="creation Users" />
     <option name="LAST_COMMIT_MESSAGE" value="creation Users" />
@@ -282,57 +317,65 @@
       <screen x="0" y="23" width="1414" height="877" />
     </state>
     <state x="457" y="315" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1414.877@0.23.1414.877" timestamp="1582820212120" />
-    <state width="1215" height="222" key="GridCell.Tab.0.bottom" timestamp="1582852176938">
-      <screen x="0" y="23" width="1414" height="877" />
+    <state width="1432" height="269" key="GridCell.Tab.0.bottom" timestamp="1583010684806">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1476" height="189" key="GridCell.Tab.0.bottom/-1894.23.1894.1057/0.23.1680.1027@-1894.23.1894.1057" timestamp="1580736475626" />
-    <state width="1215" height="222" key="GridCell.Tab.0.bottom/0.23.1414.877@0.23.1414.877" timestamp="1582852176938" />
+    <state width="1070" height="222" key="GridCell.Tab.0.bottom/0.23.1254.777@0.23.1254.777" timestamp="1582890443753" />
+    <state width="1215" height="222" key="GridCell.Tab.0.bottom/0.23.1414.877@0.23.1414.877" timestamp="1582900148632" />
+    <state width="1432" height="269" key="GridCell.Tab.0.bottom/1680.23.1340.1001/0.23.1680.1027@0.23.1680.1027" timestamp="1583010684806" />
     <state width="958" height="189" key="GridCell.Tab.0.bottom/26.23.1254.777@26.23.1254.777" timestamp="1580688585188" />
     <state width="1172" height="241" key="GridCell.Tab.0.bottom/26.23.1414.877@26.23.1414.877" timestamp="1580606466731" />
     <state width="1381" height="241" key="GridCell.Tab.0.bottom/26.23.1654.1027@26.23.1654.1027" timestamp="1580605534326" />
-    <state width="1215" height="222" key="GridCell.Tab.0.center" timestamp="1582852176937">
-      <screen x="0" y="23" width="1414" height="877" />
+    <state width="1432" height="269" key="GridCell.Tab.0.center" timestamp="1583010684805">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1476" height="189" key="GridCell.Tab.0.center/-1894.23.1894.1057/0.23.1680.1027@-1894.23.1894.1057" timestamp="1580736475625" />
-    <state width="1215" height="222" key="GridCell.Tab.0.center/0.23.1414.877@0.23.1414.877" timestamp="1582852176937" />
+    <state width="1070" height="222" key="GridCell.Tab.0.center/0.23.1254.777@0.23.1254.777" timestamp="1582890443752" />
+    <state width="1215" height="222" key="GridCell.Tab.0.center/0.23.1414.877@0.23.1414.877" timestamp="1582900148631" />
+    <state width="1432" height="269" key="GridCell.Tab.0.center/1680.23.1340.1001/0.23.1680.1027@0.23.1680.1027" timestamp="1583010684805" />
     <state width="958" height="189" key="GridCell.Tab.0.center/26.23.1254.777@26.23.1254.777" timestamp="1580688585188" />
     <state width="1172" height="241" key="GridCell.Tab.0.center/26.23.1414.877@26.23.1414.877" timestamp="1580606466727" />
     <state width="1381" height="241" key="GridCell.Tab.0.center/26.23.1654.1027@26.23.1654.1027" timestamp="1580605534321" />
-    <state width="1215" height="222" key="GridCell.Tab.0.left" timestamp="1582852176936">
-      <screen x="0" y="23" width="1414" height="877" />
+    <state width="1432" height="269" key="GridCell.Tab.0.left" timestamp="1583010684804">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1476" height="189" key="GridCell.Tab.0.left/-1894.23.1894.1057/0.23.1680.1027@-1894.23.1894.1057" timestamp="1580736475625" />
-    <state width="1215" height="222" key="GridCell.Tab.0.left/0.23.1414.877@0.23.1414.877" timestamp="1582852176936" />
+    <state width="1070" height="222" key="GridCell.Tab.0.left/0.23.1254.777@0.23.1254.777" timestamp="1582890443752" />
+    <state width="1215" height="222" key="GridCell.Tab.0.left/0.23.1414.877@0.23.1414.877" timestamp="1582900148630" />
+    <state width="1432" height="269" key="GridCell.Tab.0.left/1680.23.1340.1001/0.23.1680.1027@0.23.1680.1027" timestamp="1583010684804" />
     <state width="958" height="189" key="GridCell.Tab.0.left/26.23.1254.777@26.23.1254.777" timestamp="1580688585187" />
     <state width="1172" height="241" key="GridCell.Tab.0.left/26.23.1414.877@26.23.1414.877" timestamp="1580606466726" />
     <state width="1381" height="241" key="GridCell.Tab.0.left/26.23.1654.1027@26.23.1654.1027" timestamp="1580605534318" />
-    <state width="1215" height="222" key="GridCell.Tab.0.right" timestamp="1582852176937">
-      <screen x="0" y="23" width="1414" height="877" />
+    <state width="1432" height="269" key="GridCell.Tab.0.right" timestamp="1583010684805">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1476" height="189" key="GridCell.Tab.0.right/-1894.23.1894.1057/0.23.1680.1027@-1894.23.1894.1057" timestamp="1580736475626" />
-    <state width="1215" height="222" key="GridCell.Tab.0.right/0.23.1414.877@0.23.1414.877" timestamp="1582852176937" />
+    <state width="1070" height="222" key="GridCell.Tab.0.right/0.23.1254.777@0.23.1254.777" timestamp="1582890443753" />
+    <state width="1215" height="222" key="GridCell.Tab.0.right/0.23.1414.877@0.23.1414.877" timestamp="1582900148631" />
+    <state width="1432" height="269" key="GridCell.Tab.0.right/1680.23.1340.1001/0.23.1680.1027@0.23.1680.1027" timestamp="1583010684805" />
     <state width="958" height="189" key="GridCell.Tab.0.right/26.23.1254.777@26.23.1254.777" timestamp="1580688585188" />
     <state width="1172" height="241" key="GridCell.Tab.0.right/26.23.1414.877@26.23.1414.877" timestamp="1580606466728" />
     <state width="1381" height="241" key="GridCell.Tab.0.right/26.23.1654.1027@26.23.1654.1027" timestamp="1580605534323" />
-    <state width="1215" height="222" key="GridCell.Tab.1.bottom" timestamp="1582852176940">
+    <state width="1215" height="222" key="GridCell.Tab.1.bottom" timestamp="1582853630698">
       <screen x="0" y="23" width="1414" height="877" />
     </state>
-    <state width="1215" height="222" key="GridCell.Tab.1.bottom/0.23.1414.877@0.23.1414.877" timestamp="1582852176940" />
+    <state width="1215" height="222" key="GridCell.Tab.1.bottom/0.23.1414.877@0.23.1414.877" timestamp="1582853630698" />
     <state width="958" height="234" key="GridCell.Tab.1.bottom/26.23.1254.777@26.23.1254.777" timestamp="1580607566853" />
-    <state width="1215" height="222" key="GridCell.Tab.1.center" timestamp="1582852176939">
+    <state width="1215" height="222" key="GridCell.Tab.1.center" timestamp="1582853630697">
       <screen x="0" y="23" width="1414" height="877" />
     </state>
-    <state width="1215" height="222" key="GridCell.Tab.1.center/0.23.1414.877@0.23.1414.877" timestamp="1582852176939" />
+    <state width="1215" height="222" key="GridCell.Tab.1.center/0.23.1414.877@0.23.1414.877" timestamp="1582853630697" />
     <state width="958" height="234" key="GridCell.Tab.1.center/26.23.1254.777@26.23.1254.777" timestamp="1580607566850" />
-    <state width="1215" height="222" key="GridCell.Tab.1.left" timestamp="1582852176938">
+    <state width="1215" height="222" key="GridCell.Tab.1.left" timestamp="1582853630697">
       <screen x="0" y="23" width="1414" height="877" />
     </state>
-    <state width="1215" height="222" key="GridCell.Tab.1.left/0.23.1414.877@0.23.1414.877" timestamp="1582852176938" />
+    <state width="1215" height="222" key="GridCell.Tab.1.left/0.23.1414.877@0.23.1414.877" timestamp="1582853630697" />
     <state width="958" height="234" key="GridCell.Tab.1.left/26.23.1254.777@26.23.1254.777" timestamp="1580607566849" />
-    <state width="1215" height="222" key="GridCell.Tab.1.right" timestamp="1582852176939">
+    <state width="1215" height="222" key="GridCell.Tab.1.right" timestamp="1582853630697">
       <screen x="0" y="23" width="1414" height="877" />
     </state>
-    <state width="1215" height="222" key="GridCell.Tab.1.right/0.23.1414.877@0.23.1414.877" timestamp="1582852176939" />
+    <state width="1215" height="222" key="GridCell.Tab.1.right/0.23.1414.877@0.23.1414.877" timestamp="1582853630697" />
     <state width="958" height="234" key="GridCell.Tab.1.right/26.23.1254.777@26.23.1254.777" timestamp="1580607566851" />
     <state x="195" y="43" width="1219" height="837" key="SettingsEditor" timestamp="1582820401517">
       <screen x="0" y="23" width="1414" height="877" />
@@ -352,16 +395,5 @@
       <screen x="0" y="23" width="1414" height="877" />
     </state>
     <state x="372" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1414.877@0.23.1414.877" timestamp="1582748400758" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bean/UserInfoDineroBean.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

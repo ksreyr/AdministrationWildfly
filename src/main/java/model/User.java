@@ -16,6 +16,8 @@ public class User {
 
     String name;
 
+    String password;
+
     @OneToMany(fetch = FetchType.EAGER,cascade=CascadeType.ALL)
     private List<Helado> helados;
 
@@ -23,8 +25,9 @@ public class User {
     }
 
 
-    public User(String name,List<Helado> helados){
+    public User(String name,String password,List<Helado> helados){
         this.name = name;
+        this.password = password;
         this.helados=helados;
     }
 

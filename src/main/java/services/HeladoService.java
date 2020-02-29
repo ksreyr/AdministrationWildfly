@@ -60,5 +60,13 @@ public class HeladoService implements Serializable {
             }
         }
     }
+    public String precioTotal(List<Helado> helados){
+       int priceTotal=0;
+        for (Helado h:
+             helados) {
+            priceTotal=priceTotal+h.getPrice();
+        }
+        return Integer.toString(priceTotal);
+    }
 }
 

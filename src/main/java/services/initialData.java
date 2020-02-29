@@ -20,9 +20,9 @@ public class initialData {
 
     @PostConstruct
     void init(){
-        User user = new User("paula",new ArrayList<Helado>());
-        User user1 = new User("daniel",new ArrayList<Helado>());
-        User user2 = new User("jeffrey",new ArrayList<Helado>());
+        User user = new User("paula","Prueba",new ArrayList<Helado>());
+        User user1 = new User("daniel","Prueba",new ArrayList<Helado>());
+        User user2 = new User("jeffrey","Prueba",new ArrayList<Helado>());
 
         Helado helado = new Helado("casero",1500,1000,"Bodega");
         Helado helado1 = new Helado("chococono",2000,2000,"Bodega");

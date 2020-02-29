@@ -35,6 +35,8 @@ public class UserInfoDineroBean implements Serializable {
 
     private  User user;
 
+    private String total;
+
     @PostConstruct
     void init(){
         id = (String) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("userID");
@@ -54,8 +56,13 @@ public class UserInfoDineroBean implements Serializable {
         helados = userService.findUser(Integer.parseInt(id)).getHelados();
         return helados;
     }
-    public int HeladoPriceSum(int id){
+    public int heladoPriceSum(int id){
         Helado h = heladoService.getHeladoByID(id);
         return h.getNumber()*h.getPrice();
+    }
+    public String totalGelb(){
+        List<Helado> helados= userService.findUser(Integer.parseInt(id)).getHelados();
+        total=heladoService.precioTotal(helados);
+        return total;
     }
 }
