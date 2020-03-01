@@ -1,5 +1,7 @@
 bean/CreateUserBean.class
+bean/BodegaInfoBean.class
 bean/empleadosInfoBean.class
+bean/UserInfoDineroBean.class
 services/initialData.class
 dao/objectDAO.class
 services/HeladoService.class
@@ -10,4 +12,5 @@ services/UserService.class
 model/Helado.class
 dao/UserDAO.class
 model/User.class
+bean/ValidationBean.class
 bean/CreateHeladoBean.class

@@ -32,6 +32,7 @@ public class UserDAO extends objectDAO {
 
     public User getUserByID(int id) {
         User user = em.find(User.class, id);
+
         return user;
     }
      public User getUsetByName(String name){
