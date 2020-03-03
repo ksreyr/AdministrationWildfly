@@ -57,7 +57,13 @@
         </dependency>
     </dependencies>
 
-
+    <properties>
+        <wildfly-home>/usr/local/opt/wildfly-as</wildfly-home>
+        <wildfly-hostname>127.0.0.1</wildfly-hostname>
+        <wildfly-port>9990</wildfly-port>
+        <wildfly-username>KevinRey</wildfly-username>
+        <wildfly-password>kevin1992</wildfly-password>
+    </properties>
     <build>
         <plugins>
             <plugin>
@@ -73,6 +79,20 @@
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>2.1.0.Beta1</version>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <hostname>${wildfly-hostname}</hostname>
+                    <port>${wildfly-port}</port>
+                    <username>${wildfly-username}</username>
+                    <password>${wildfly-password}</password>
+                </configuration>
             </plugin>
         </plugins>
         <finalName>Helados</finalName>
