@@ -1,17 +1,18 @@
 package services;
 
 import model.Helado;
+import model.Punto;
 import model.User;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
-import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.Base64;
 
 @Singleton
 @Startup
@@ -19,41 +20,48 @@ public class initialData {
 
     @PersistenceContext
     EntityManager em;
+    private String password = "pruebe";
+    Logger logger = LoggerFactory.getLogger(initialData.class);
+
 
     @PostConstruct
-    void init(){
-        SecureRandom random = new SecureRandom();
-        byte bytes[] = new byte[20];
-        random.nextBytes(bytes);
-        Base64.Encoder encoder = Base64.getUrlEncoder().withoutPadding();
-        String token = encoder.encodeToString(bytes);
+    void init() {
 
 
-        User user = new User("paula","Prueba",new ArrayList<Helado>());
-        User user1 = new User("daniel","Prueba",new ArrayList<Helado>());
-        User user2 = new User("jeffrey","Prueba",new ArrayList<Helado>());
+        User user = new User("paula", DigestUtils.sha256Hex(password), new ArrayList<Helado>());
+        logger.info("created " + user.getName());
 
-        Helado helado = new Helado("casero",1500,1000,"Bodega");
-        Helado helado1 = new Helado("chococono",2000,2000,"Bodega");
-        Helado helado2 = new Helado("Polet",5000,3000,"Bodega");
+        User user1 = new User("daniel", DigestUtils.sha256Hex(password), new ArrayList<Helado>());
+        logger.info("created " + user1.getName());
 
-        System.out.println("::::Persist User::::");
+        User user2 = new User("jeffrey", DigestUtils.sha256Hex(password), new ArrayList<Helado>());
+        logger.info("created " + user2.getName());
+
+        Helado helado = new Helado("Casero", 1500, 100, "Bodega");
+        logger.info("created " + helado.getName());
+
+        Helado helado1 = new Helado("Chococono", 2000, 200, "Bodega");
+        logger.info("created " + helado1.getName());
+
+        Helado helado2 = new Helado("Polet", 5000, 300, "Bodega");
+        logger.info("created " + helado2.getName());
+
+        Punto punto = new Punto("Psicina P");
+        logger.info("created " + helado2.getName());
+
         em.persist(user);
-        System.out.println("::::Persist User DONE::::"+user.getName());
-        System.out.println("::::Persist User::::");
+        logger.info("persisted" + user.getName(), user.getName());
         em.persist(user1);
-        System.out.println("::::Persist User DONE::::"+user1.getName());
-        System.out.println("::::Persist User::::");
+        logger.info("persisted", user1.getName());
         em.persist(user2);
-        System.out.println("::::Persist User DONE::::"+user2.getName());
-        System.out.println("::::Persist Helado::::");
+        logger.info("persisted", user2.getName());
         em.persist(helado);
-        System.out.println("::::Persist helado DONE::::"+helado.getName());
-        System.out.println("::::Persist Helado::::");
+        logger.info("persisted", helado.getName());
         em.persist(helado1);
-        System.out.println("::::Persist helado DONE::::"+helado1.getName());
-        System.out.println("::::Persist Helado::::");
+        logger.info("persisted", helado1.getName());
         em.persist(helado2);
-        System.out.println("::::Persist helado DONE::::"+helado2.getName());
+        logger.info("persisted", helado2.getName());
+        em.persist(punto);
+        logger.info("persisted", punto.getName());
     }
 }

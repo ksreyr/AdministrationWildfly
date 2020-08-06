@@ -34,7 +34,7 @@
                     <p:commandButton ajax="false"
                                      value="Ver"
                                      icon="pi pi-arrow-right"
-                                     action="#{empleadosInfoBean.userInfo(user.userID)}"
+                                     action="#{empleadosInfoBean.userInfo(user.ownerID)}"
                                      style="margin-right:40px"/>
                 </h:form>
             </p:column>
@@ -44,7 +44,7 @@
                     <p:commandButton ajax="false"
                                      value="Dinero"
                                      icon="pi pi-arrow-right"
-                                     action="#{empleadosInfoBean.userInfoDinero(user.userID)}"
+                                     action="#{empleadosInfoBean.userInfoDinero(user.ownerID)}"
                                      style="margin-right:40px"/>
                 </h:form>
             </p:column>

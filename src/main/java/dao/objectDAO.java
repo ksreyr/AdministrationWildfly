@@ -10,4 +10,6 @@ public abstract class objectDAO {
     @PersistenceContext(unitName = "pu")
     protected EntityManager em;
 
+
+
 }

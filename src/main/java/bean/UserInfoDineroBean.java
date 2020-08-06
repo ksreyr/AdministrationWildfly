@@ -18,7 +18,6 @@ import java.io.Serializable;
 import java.util.List;
 
 @Named("userInfoDineroBean")
-@Transactional
 @ViewScoped
 @Data
 public class UserInfoDineroBean implements Serializable {

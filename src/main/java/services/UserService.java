@@ -5,11 +5,14 @@ import dao.UserDAO;
 import lombok.Data;
 import model.Helado;
 import model.User;
+import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.inject.Inject;
+import javax.security.enterprise.identitystore.PasswordHash;
 import javax.transaction.Transactional;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Optional;
 
 @Transactional
 @Data
@@ -59,11 +62,14 @@ public class UserService implements Serializable {
         User u = userDAO.getUsetByName(name);
         return u;
     }
-    public boolean userValidation(User u, String s){
-        if(u.getPassword()==s){
+    public boolean userValidation(String name, String s){
+        Optional<User> userfound = Optional.ofNullable(userDAO.getUsetByName(name));
+        if(userfound.isPresent() && userfound.get().getPassword().equals(DigestUtils.sha256Hex(s))){
             return true;
+        }else {
+            return false;
         }
-        return false;
+
     }
 
 }

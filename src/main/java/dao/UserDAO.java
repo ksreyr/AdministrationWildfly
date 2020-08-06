@@ -7,13 +7,15 @@ import java.util.List;
 public class UserDAO extends objectDAO {
 
     public void createUser(User user) {
-        em.persist(user);
+        if (!user.equals(null)) {
+            em.persist(user);
+        }
     }
 
     public void update(User user) {
-
-        em.merge(user);
-
+        if(!user.equals(null)){
+            em.merge(user);
+        }
     }
 
     public void delete(User user){

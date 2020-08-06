@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Named("createdUserBean")
-@Transactional
 @ViewScoped
 @Data
 public class CreateUserBean implements Serializable {

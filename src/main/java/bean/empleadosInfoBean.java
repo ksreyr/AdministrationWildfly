@@ -16,7 +16,6 @@ import java.io.Serializable;
 import java.util.List;
 
 @Named("empleadosInfoBean")
-@Transactional
 @RequestScoped
 @Data
 public class empleadosInfoBean implements Serializable {

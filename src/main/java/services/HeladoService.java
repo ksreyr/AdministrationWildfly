@@ -16,6 +16,7 @@ public class HeladoService implements Serializable {
     @Inject
     HeladoDAO heladoDAO;
 
+    Helado helado;
     List<Helado> helados;
 
     public void createHelado(Helado helado) {
@@ -37,7 +38,7 @@ public class HeladoService implements Serializable {
     }
 
     public Helado getHeladoByID(int heladoID) {
-        Helado helado = heladoDAO.findByID(heladoID);
+        helado = heladoDAO.findByID(heladoID);
         return helado;
     }
 
@@ -47,7 +48,7 @@ public class HeladoService implements Serializable {
     }
 
     public Helado getHeladoByName(String name, String owner) {
-        Helado helado = heladoDAO.findByNameAndOwner(name, owner);
+        helado = heladoDAO.findByNameAndOwner(name, owner);
         return helado;
     }
 

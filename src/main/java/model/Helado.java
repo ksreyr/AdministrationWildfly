@@ -37,14 +37,4 @@ public class Helado {
         this.owner=owner;
 
     }
-    //CONSTRUCTOR
-    @Override
-    public String toString() {
-        return "Helado{" +
-                "heladoID=" + heladoID +
-                ", name='" + name + '\'' +
-                ", number=" + number +
-                ", owner=" + owner +
-                '}';
-    }
 }

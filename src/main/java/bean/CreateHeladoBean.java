@@ -12,7 +12,6 @@ import java.io.Serializable;
 import java.util.List;
 
 @Named("createHeladoBean")
-@Transactional
 @ViewScoped
 @Data
 public class CreateHeladoBean implements Serializable {

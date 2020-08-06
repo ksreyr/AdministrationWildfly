@@ -17,7 +17,6 @@ import java.io.Serializable;
 import java.util.List;
 
 @Named("surtirEmpleadoBean")
-@Transactional
 @RequestScoped
 @Data
 public class SurtirEmpleadoBean implements Serializable {

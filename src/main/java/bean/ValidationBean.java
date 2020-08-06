@@ -23,12 +23,10 @@ public class ValidationBean implements Serializable {
     UserService userService;
 
     public String validate(){
-        try {
-            User u = userService.findUserByName(name);
-            userService.userValidation(u,password);
+       if(!password.isEmpty()&&!name.isEmpty()){
+            userService.userValidation(name,password);
             return "index?faces-redirect=true";
-        } catch (Exception e) {
-            e.printStackTrace();
+        } else{
              return "login?faces-redirec=true";
         }
     }

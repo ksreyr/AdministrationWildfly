@@ -8,7 +8,6 @@ import java.io.Serializable;
 
 @Named("indexBean")
 @RequestScoped
-@Transactional
 public class IndexBean implements Serializable {
 
     public String linkCrearUsuario() {
@@ -34,5 +33,6 @@ public class IndexBean implements Serializable {
     public String linkinfoBodegas() {
         return "bodegaInfo?faces-redirect=true";
     }
+
 }
 

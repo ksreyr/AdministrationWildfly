@@ -14,7 +14,7 @@ import java.io.Serializable;
 import java.util.List;
 
 
-@Transactional
+
 @Named("bodegaInfoBean")
 @ViewScoped
 @Data
