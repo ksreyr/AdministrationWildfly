@@ -11,5 +11,4 @@ public abstract class objectDAO {
     protected EntityManager em;
 
 
-
 }
