@@ -3,6 +3,7 @@ package dao;
 import model.Helado;
 
 import java.util.List;
+import java.util.Optional;
 
 public class HeladoDAO extends objectDAO {
 
@@ -32,9 +33,12 @@ public class HeladoDAO extends objectDAO {
         return helados;
     }
 
-    public Helado findByID(int id) {
-        Helado helado = em.find(Helado.class, id);
-        return helado;
+    public Optional<Helado> findByID(int id) {
+        if(Optional.of(em.find(Helado.class, id)).isPresent()){
+            return Optional.of(em.find(Helado.class, id));
+        }else{
+            return Optional.of(null);
+        }
     }
     public Helado findByNameAndOwner(String name,String owner){
         Helado helado = (Helado) em.createQuery("SELECT h FROM Helado h WHERE h.name='"+name+"' and h.owner = '"+owner+"'").getSingleResult();

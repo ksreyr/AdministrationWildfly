@@ -2,9 +2,8 @@ package model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -14,6 +13,9 @@ public abstract class  Owner {
     int ownerID;
 
     String name;
+
+    @OneToMany(fetch = FetchType.EAGER,cascade=CascadeType.ALL)
+    List<Helado> helados;
 
     public Owner(String name) {
         this.name=name;

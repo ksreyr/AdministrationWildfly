@@ -1,4 +1,4 @@
-package bean;
+package bean.info;
 
 
 import lombok.Data;
@@ -59,7 +59,7 @@ public class UserInfoDineroBean implements Serializable {
         Helado h = heladoService.getHeladoByID(id);
         return h.getNumber()*h.getPrice();
     }
-    public String totalGelb(){
+    public String totalMoney(){
         List<Helado> helados= userService.findUser(Integer.parseInt(id)).getHelados();
         total=heladoService.precioTotal(helados);
         return total;

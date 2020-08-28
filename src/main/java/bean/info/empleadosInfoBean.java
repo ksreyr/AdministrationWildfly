@@ -1,4 +1,4 @@
-package bean;
+package bean.info;
 
 import lombok.Data;
 import model.Helado;

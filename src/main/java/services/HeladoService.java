@@ -8,6 +8,7 @@ import javax.inject.Inject;
 import javax.transaction.Transactional;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Optional;
 
 @Transactional
 @Data
@@ -38,8 +39,13 @@ public class HeladoService implements Serializable {
     }
 
     public Helado getHeladoByID(int heladoID) {
-        helado = heladoDAO.findByID(heladoID);
-        return helado;
+        if(heladoDAO.findByID(heladoID).isPresent()){
+            helado = heladoDAO.findByID(heladoID).get();
+            return helado;
+        }else{
+            return null;
+        }
+
     }
 
     public void editHelado(Helado helado) {

@@ -22,7 +22,7 @@ public class IndexBean implements Serializable {
     }
 
     public String linkinofPuntos() {
-        return "puntoList?faces-redirect=true";
+        return "surtirPunto?faces-redirect=true";
     }
 
     public String linkinofEmpleados() {

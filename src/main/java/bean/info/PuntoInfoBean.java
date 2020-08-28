@@ -1,4 +1,4 @@
-package bean;
+package bean.info;
 
 import lombok.Data;
 import model.Punto;
@@ -29,7 +29,7 @@ public class PuntoInfoBean {
         return "index?faces-redirect=true";
     }
     public String puntoFill(String puntoID){
-        FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("puntoID",puntoID);
-        return "surtirPunto?faces-redirect=true";
+        FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("ID",puntoID);
+        return "surtir?faces-redirect=true";
     }
 }
