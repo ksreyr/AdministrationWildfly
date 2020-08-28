@@ -2,7 +2,6 @@ package bean;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
-import javax.transaction.Transactional;
 import java.io.Serializable;
 
 
@@ -22,15 +21,15 @@ public class IndexBean implements Serializable {
         return "surtirEmpleado?faces-redirect=true";
     }
 
-    public String linkinfoPuntos() {
-        return "puntoInfo?faces-redirect=true";
+    public String linkinofPuntos() {
+        return "puntoList?faces-redirect=true";
     }
 
-    public String linkinfoEmpleados() {
+    public String linkinofEmpleados() {
         return "empleadosInfo?faces-redirect=true";
     }
 
-    public String linkinfoBodegas() {
+    public String linkinofBodegas() {
         return "bodegaInfo?faces-redirect=true";
     }
 

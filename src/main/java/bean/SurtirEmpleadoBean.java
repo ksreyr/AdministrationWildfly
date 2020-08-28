@@ -40,9 +40,7 @@ public class SurtirEmpleadoBean implements Serializable {
     }
 
     public String linkSurtir(String id) {
-
         FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("ID", id);
-
         return "surtir?faces-redirect=true";
     }
 
@@ -58,6 +56,7 @@ public class SurtirEmpleadoBean implements Serializable {
         try {
             String id = (String) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("ID");
             //USER TO UPDATE
+
             User hUser= userService.findUser(Integer.parseInt(id));
             //HELADO TO UPDATE
             Helado heladoEnBodega = heladoService.getHeladoByID(Integer.parseInt(heladoID));

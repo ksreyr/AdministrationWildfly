@@ -5,6 +5,7 @@ import model.Punto;
 import services.PuntoService;
 
 import javax.enterprise.context.RequestScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.ArrayList;
@@ -22,5 +23,13 @@ public class PuntoInfoBean {
     public List<Punto> allPuntos() {
         puntoList = puntoService.getallPuntosList();
         return puntoList;
+    }
+    public String linkHome() {
+
+        return "index?faces-redirect=true";
+    }
+    public String puntoFill(String puntoID){
+        FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("puntoID",puntoID);
+        return "surtirPunto?faces-redirect=true";
     }
 }

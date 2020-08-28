@@ -26,10 +26,20 @@
     <p:commandButton icon="pi pi-arrow-right" oncomplete="PF('sidebar1').show()"/>
 
 
-    <p:panel header="Lista de Usuarios disponibles">
+    <p:panel header="Lista de Puntos disponibles">
         <p:dataTable var="punto" value="#{puntoInfoBean.allPuntos()}">
             <p:column headerText="Name">
                 <h:outputText value="#{punto.name}"/>
+            </p:column>
+            <p:column headerText="Ver productos del Punto">
+                <h:form>
+
+                    <p:commandButton ajax="false"
+                                     value="Ver"
+                                     icon="pi pi-arrow-right"
+                                     action="#{puntoInfoBean.puntoFill(punto.ownerID)}"
+                                     style="margin-right:40px"/>
+                </h:form>
             </p:column>
         </p:dataTable>
     </p:panel>

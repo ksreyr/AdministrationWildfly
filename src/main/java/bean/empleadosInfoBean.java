@@ -45,8 +45,9 @@ public class empleadosInfoBean implements Serializable {
 
     public String userInfo(String userID){
         FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("userID",userID);
-        return "userInfo?faces-redirect=true";
+        return "userInfoHelados?faces-redirect=true";
     }
+
     public String userInfoDinero(String userID){
         FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("userID",userID);
         return "userInfoDinero?faces-redirect=true";
