@@ -1,4 +1,4 @@
-image: wildfly-maven:latest
+image: maven:latest
 
 cache:
   paths:
