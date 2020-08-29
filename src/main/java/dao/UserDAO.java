@@ -2,11 +2,12 @@ package dao;
 
 import model.User;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 public class UserDAO extends objectDAO {
 
-    public void createUser(User user) {
+    public void createUser(@NotNull User user) {
         if (!user.equals(null)) {
             em.persist(user);
         }
