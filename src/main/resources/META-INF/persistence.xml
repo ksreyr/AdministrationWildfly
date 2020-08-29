@@ -7,10 +7,10 @@
     <persistence-unit name="pu" transaction-type="JTA">
         <jta-data-source>java:/helados</jta-data-source>
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:./helados;DB_CLOSE_ON_EXIT=FALSE;" />
+            <property name="javax.persistence.jdbc.url" value="java:/DefaultDS;DB_CLOSE_ON_EXIT=FALSE;" />
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
-            <property name="javax.persistence.jdbc.user" value="helados" />
-            <property name="javax.persistence.jdbc.password" value="helados" />
+            <property name="javax.persistence.jdbc.user" value="sa" />
+            <property name="javax.persistence.jdbc.password" value="sa" />
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
             <property name="hibernate.enable_lazy_load_no_trans" value="true"/>
         </properties>
