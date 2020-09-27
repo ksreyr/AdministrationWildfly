@@ -5,7 +5,7 @@
 
 
     <persistence-unit name="pu" transaction-type="JTA">
-        <jta-data-source>java:/helados</jta-data-source>
+        <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
         <properties>
             <property name="javax.persistence.jdbc.url" value="java:/DefaultDS;DB_CLOSE_ON_EXIT=FALSE;" />
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
